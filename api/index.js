@@ -18,6 +18,7 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
+require('dotenv').config();
 const { conn, DietType } = require('./src/db.js');
 
 // Syncing all the models at once.
@@ -29,59 +30,4 @@ conn.sync({ force: true }).then(() => {
 }
 )
  
-/*   let glutenFree = DietType.findOrCreate({
-    where: {
-      name: 'Gluten Free'
-    ,}
-});
-  let ketogenic = DietType.findOrCreate({
-    where: {
-      name: 'Ketogenic'
-    ,}
-});
-  let lactoOvoVegetarian = DietType.findOrCreate({
-    where: {
-      name: 'Lacto Ovo Vegetarian'
-    ,}
-});
-  let paleolithic = DietType.findOrCreate({
-    where: {
-      name: 'Paleolithic'
-    ,}
-});
-  let pescetarian = DietType.findOrCreate({
-    where: {
-      name: 'Pescetarian'
-    ,}
-});
-  let primal = DietType.findOrCreate({
-    where: {
-      name: 'Primal'
-    ,}
-});
-  let vegan = DietType.findOrCreate({
-    where: {
-      name: 'Vegan'
-    ,}
-});
-  let dairyFree = DietType.findOrCreate({
-    where: {
-      name: 'Dairy Free'
-    ,}
-});
-  let fodmapFriendly = DietType.findOrCreate({
-    where: {
-      name: 'Fodmap Friendly'
-    ,}
-});
-  let Whole30 = DietType.findOrCreate({
-    where: {
-      name: 'Whole 30'
-    ,}
-}); */
-/* 
-Promise.all([glutenFree, ketogenic, lactoOvoVegetarian, paleolithic, pescetarian, primal, vegan, dairyFree, fodmapFriendly, Whole30]).then(() => {
-  console.log ('Diet types created');
-})
-});  
- */
+

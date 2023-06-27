@@ -13,8 +13,8 @@ router.get('/', async (req, res, next) => {
                 where: { name: e} 
             })
         });
-        const dietTypes = await Diet.findAll(); //obtiene todos los tipos de dieta de la base de datos
-        res.send(dietTypes) //envia a la aplicacion
+        const dietTypes = await Diet.findAll(); 
+        res.send(dietTypes) 
     } catch (error) { 
         next(error) 
     }

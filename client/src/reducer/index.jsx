@@ -64,8 +64,8 @@ export default function rootReducer(state = initialState, action) {
       sortedRecipesByHealthScore =
         action.payload === "asc"
           ? state.recipes.sort(function (a, b) {
-              if (a.healthScore > b.healthScore) return 1; // se ubica el mayor en la primera posicion
-              if (a.healthScore < b.healthScore) return -1; // se ubica el menor en la primera posicion
+              if (a.healthScore > b.healthScore) return 1; 
+              if (a.healthScore < b.healthScore) return -1; 
               return 0;
             })
           : state.recipes.sort(function (a, b) {

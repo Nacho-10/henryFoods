@@ -23,7 +23,7 @@ router.get('/', async (req, res, next) => {
                         dietTypes: e.dietTypes ? e.dietTypes : e.diets.map(e => e.name),
                         id: e.id,
                         createInDb: e.createdInDb,
-                     /*    veryHealthy: e.veryHealthy, */
+                    
                     }
                 })
                 return res.status(200).send(recipes); 
@@ -38,7 +38,7 @@ router.get('/', async (req, res, next) => {
                     healthScore: e.healthScore,
                     id: e.id,
                     createInDb: e.createdInDb,
-                   /*  veryHealthy: e.veryHealthy, */
+                   
 
                 }
             })
@@ -65,23 +65,23 @@ router.get('/:id', async (req, res, next) => {
                     dishTypes: apiRecipesById.data.dishTypes,
                     dietTypes: apiRecipesById.data.diets,
                     summary: apiRecipesById.data.summary,
-                    /*    veryHealthy: apiRecipesById.data.veryHealthy, */
+                    
                     createInDb: apiRecipesById.data.createInDb ,
                     healthScore: apiRecipesById.data.healthScore,
                     steps: apiRecipesById.data.analyzedInstructions[0]?.steps.map(e => {
          
                         return {
-                            number: e.number, //numero de paso
-                            step: e.step //paso
+                            number: e.number,
+                            step: e.step 
                         }
                     })
                 }
              
-                return res.status(200).send(recipeDetails);  //envia la receta a la aplicacion
+                return res.status(200).send(recipeDetails); 
             }
         } 
     } catch {
-        return res.status(404).send('Recipe not found') //envia el error a la aplicacion
+        return res.status(404).send('Recipe not found') 
     }
 });
     

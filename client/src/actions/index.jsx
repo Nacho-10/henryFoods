@@ -13,7 +13,7 @@ import {
 
 
 export function getRecipes() {
-  // get all recipes
+  
   return async function (dispatch) {
     const response = await axios.get(`${LOCAL_HOST}/recipes`);
     dispatch({
@@ -22,24 +22,7 @@ export function getRecipes() {
     });
   };
 }
-//PROMESAS
-/* export const getRecipesByName = (payload) => {
-  return function (dispatch) {
-    try {
-      axios
-        .get(`${LOCAL_HOST}/recipes?name=${payload}`, {})
-        .then((response) => {
-          dispatch({
-            type: SEARCH_RECIPE,
-            payload: response.data,
-          });
-        });
-    } catch (error){
-     alert("Recipe Not Found");
-    }
-  }; 
- }; */
-//ASYNC AWAIT
+
  export function getRecipesByName(payload) {
   return async function (dispatch) {
     try {

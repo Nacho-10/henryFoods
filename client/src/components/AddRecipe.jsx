@@ -23,7 +23,7 @@ function validate(input) {
 export default function AddRecipe() {
   const dispatch = useDispatch();
   const dietTypes = useSelector((state) => state.dietTypes);
-  const history = useHistory(); //
+  const history = useHistory(); 
 
   
   const [errors, setErrors] = useState({});
@@ -47,20 +47,20 @@ export default function AddRecipe() {
         ...prevInput,
         [e.target.name]: e.target.value, 
       };
-      const validations = validate(newInput); //valido el input 
-      setErrors(validations); //actualizo el estado de errores
-      return newInput; //devuelvo el input actualizado
+      const validations = validate(newInput); 
+      setErrors(validations); 
+      return newInput; 
     });
   }
 
   function handleCheckBox(e) {
-    let newArray = input.dietTypes; //creo un array con los tipos de dieta actuales
-    let find = newArray.indexOf(e.target.value); //busco el valor del checkbox en el array de dietTypes
+    let newArray = input.dietTypes; 
+    let find = newArray.indexOf(e.target.value); 
 
     if (find >= 0) { 
-      newArray.splice(find, 1); //si el valor existe en el array, lo elimino
+      newArray.splice(find, 1); 
     } else {
-      newArray.push(e.target.value); //si el valor no existe en el array, lo agrego
+      newArray.push(e.target.value); 
     }
 
     setInput({
@@ -111,7 +111,7 @@ export default function AddRecipe() {
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className="form">
               <div className="prettierForm">
-                {/* NAME */}
+                
                 <div className="nameInput">
                   <label className="msgs">Name</label>
                   <input
@@ -123,7 +123,7 @@ export default function AddRecipe() {
                   />
                   {errors.name && <span className="errors">{errors.name}</span>} 
                 </div>
-                {/* SUMMARY */}
+                
                 <div className="nameInput">
                   <label className="msgs">Summary</label>
                   <textarea
@@ -138,7 +138,7 @@ export default function AddRecipe() {
                     <span className="errors">{errors.summary}</span>
                   )}
                 </div>
-                {/* HEALTH SCORE */}
+                
                 <div className="nameInput">
                   <label className="msgs">Health Score (1/100)</label>
                   <input
@@ -151,7 +151,7 @@ export default function AddRecipe() {
                     <span className="errors">{errors.healthScore}</span>
                   )}
                 </div>
-                {/* STEPS */}
+                
                 <div className="nameInput">
                   <label className="msgs">Steps:</label>
                   <textarea
@@ -167,7 +167,7 @@ export default function AddRecipe() {
                   )}
                 </div>
               </div>
-              {/* DIET TYPES */}
+              
               <div className="checkSelect">
                 <label className="msgs">Diet Types:</label>
                 {dietTypes.map((d) => {
@@ -179,8 +179,8 @@ export default function AddRecipe() {
                         type="checkbox"
                         name={d} 
                         value={d}  
-                        selected={input.dietTypes.includes(d)} //si esta seleccionado o no el checkbox (si esta en el array)
-                        onChange={(e) => handleCheckBox(e)} //cuando selecciono el checkbox, se ejecuta la funcion handleCheckBox
+                        selected={input.dietTypes.includes(d)} 
+                        onChange={(e) => handleCheckBox(e)} 
                       />
                     </div>
                   );
