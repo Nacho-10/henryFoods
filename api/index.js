@@ -22,7 +22,7 @@ require('dotenv').config();
 const { conn, DietType } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   console.log('Database synced successfully');
   server.listen(process.env.PORT, () => {
     console.log('Server listening at 3001'); // eslint-disable-line no-console

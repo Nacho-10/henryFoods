@@ -16,8 +16,7 @@ const initialState = {
   dietTypes: [],
   recipeDetails: [],
 };
-// el reducer es una funcion que recibe el estado y un action y devuelve el estado actualizado
-// el store es un objeto que contiene el estado y el reducer se encarga de actualizar el estado
+
 
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {

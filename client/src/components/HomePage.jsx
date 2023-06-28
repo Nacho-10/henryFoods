@@ -20,7 +20,7 @@ export default function Home() {
   const dispatch = useDispatch();
   const allRecipes = useSelector((state) => state.recipes);
 
-  const [setOrder] = useState("");
+  const [order, setOrder] = useState("");
 
   const [page, setPage] = useState(1);
   const [recipesPage] = useState(9);
