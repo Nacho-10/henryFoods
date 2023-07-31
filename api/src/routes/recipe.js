@@ -6,7 +6,7 @@ const router = Router();
 
 router.post('/', async (req, res, next) => {
     try { 
-        const { name, summary, healthScore, steps, dietTypes } = req.body  
+        const { name, summary, healthScore, steps, dietTypes} = req.body  
         const newRecipe = await Recipe.create({ 
             name, 
             summary,
