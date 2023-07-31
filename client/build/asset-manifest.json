@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68b2bcf0.chunk.css",
+    "main.js": "/static/js/main.2ffcb0e2.chunk.js",
+    "main.js.map": "/static/js/main.2ffcb0e2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.def11e48.js",
+    "runtime-main.js.map": "/static/js/runtime-main.def11e48.js.map",
+    "static/js/2.972f2eaf.chunk.js": "/static/js/2.972f2eaf.chunk.js",
+    "static/js/2.972f2eaf.chunk.js.map": "/static/js/2.972f2eaf.chunk.js.map",
+    "static/js/3.59ed998f.chunk.js": "/static/js/3.59ed998f.chunk.js",
+    "static/js/3.59ed998f.chunk.js.map": "/static/js/3.59ed998f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.68b2bcf0.chunk.css.map": "/static/css/main.68b2bcf0.chunk.css.map",
+    "static/js/2.972f2eaf.chunk.js.LICENSE.txt": "/static/js/2.972f2eaf.chunk.js.LICENSE.txt",
+    "static/media/AddRecipe.css": "/static/media/LET´S CREATE.ee7be2b1.png",
+    "static/media/landing.c08f0020.png": "/static/media/landing.c08f0020.png",
+    "static/media/logo.1fbc8bfd.png": "/static/media/logo.1fbc8bfd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.def11e48.js",
+    "static/js/2.972f2eaf.chunk.js",
+    "static/css/main.68b2bcf0.chunk.css",
+    "static/js/main.2ffcb0e2.chunk.js"
+  ]
+}
